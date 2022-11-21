@@ -7,10 +7,10 @@ orbs:
 jobs:
   build_and_test:
     executor: node/default
-    # working_directory: backend
-    app-dir: backend
+    working_directory: ~/market/backend
     steps:
-      - checkout
+      - checkout:
+          path: ~/market
       - node/install-packages:
           pkg-manager: yarn
       - run:

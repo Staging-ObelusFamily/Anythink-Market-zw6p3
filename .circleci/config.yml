@@ -1,13 +1,11 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@x.y
+  node: circleci/node@16
           
 jobs:
   build_and_test:
-    executor:
-      name: node/default
-      tag: '16'
+    executor: node/default
     working_directory: ~/market/frontend
     steps:
       - checkout:

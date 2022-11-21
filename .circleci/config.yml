@@ -8,6 +8,7 @@ jobs:
   build_and_test:
     executor: node/default
     # working_directory: backend
+    app-dir: backend
     steps:
       - checkout
       - node/install-packages:

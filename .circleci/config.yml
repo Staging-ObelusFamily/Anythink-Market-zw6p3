@@ -7,7 +7,7 @@ orbs:
 jobs:
   build_and_test:
     executor: node/default
-    working_directory: ~/market/backend
+    working_directory: ~/market/frontend
     steps:
       - checkout:
           path: ~/market
@@ -20,7 +20,7 @@ jobs:
           command: yarn build
           name: Build app
       - persist_to_workspace:
-          root: ~/backend
+          root: ~/market/frontend
           paths: .
 
 

@@ -16,6 +16,9 @@ jobs:
       - run:
           name: Run tests
           command: yarn test
+      - done:
+          name: done
+          command: echo "done"
 
 
 

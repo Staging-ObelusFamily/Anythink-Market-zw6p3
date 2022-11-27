@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@5.0.3
-
 jobs:
   build-and-test:
     docker:
@@ -16,9 +13,6 @@ jobs:
       - run:
           name: Run tests
           command: yarn test
-      - done:
-          name: done
-          command: echo "done"
 
 
 
